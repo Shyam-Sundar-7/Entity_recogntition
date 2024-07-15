@@ -47,14 +47,23 @@ Before you begin, ensure you have the following installed:
 You can run the application using one of the two provided Streamlit scripts:
 - **main.py**: Standard version.
 - **main2.py**: Uses threading for potentially improved performance.
+- **main3.py**: Better UI with threading performance.
 
 To run the application, execute one of the following commands:
 ```bash
 streamlit run main.py
 # or
 streamlit run main2.py
+# or
+streamlit run main3.py
 ```
 
 ## Demo
 
-[strealmit_demo](https://github.com/user-attachments/assets/198705d5-28db-4b83-90b8-8c270af06d4a)
+streamlit run main2.py
+
+[streamlit_demo](https://github.com/user-attachments/assets/198705d5-28db-4b83-90b8-8c270af06d4a)
+
+streamlit run main3.py
+
+[streamlit_demo2](https://github.com/user-attachments/assets/2877527e-0df9-42b2-a511-2bdc3eff5910)
