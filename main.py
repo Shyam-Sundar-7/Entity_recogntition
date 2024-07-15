@@ -19,15 +19,21 @@ if uploaded_file is not None and st.button("Extract Features"):
         os.remove(tmp_file_path)
 
     start_time_basic = time.time()
+    json_tab1, json_tab2 = st.tabs(["Basic Features", "Features with products"])
     with st.spinner("Extracting features with basic features"):
         d = extract_features(pages)
-        st.json(d)
+        # st.json(d)
     elapsed_time_basic = time.time() - start_time_basic
     st.write(f"Time taken for extracting features with basic features: {elapsed_time_basic:.2f} seconds")
 
     start_time_product = time.time()
     with st.spinner("Extracting features with product details"):
         d2 = extract_features_with_products(pages)
-        st.json(d2)
+        # st.json(d2)
+    
     elapsed_time_product = time.time() - start_time_product
     st.write(f"Time taken for extracting features with product details: {elapsed_time_product:.2f} seconds")
+    with json_tab1:
+        st.json(d)
+    with json_tab2:
+        st.json(d2)
